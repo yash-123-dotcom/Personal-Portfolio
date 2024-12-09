@@ -28,7 +28,7 @@ Project Showcase: Dedicated section to highlight your best work.
 Contact Form: Easy way for visitors to reach out to you.
 🖼️ Screenshots
 
-<img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="yash(yashu)sharma" height="30" width="40" /></a> 
+<img align="center" src="Screenshot 2024-12-09 114206.png" alt="Portfolio" height="30" width="40" /></a> 
 
 🔧 Tech Stack
 HTML5: For the structure of the website.
