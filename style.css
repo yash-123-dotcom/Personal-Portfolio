@@ -557,12 +557,12 @@ h2 {
 }
 
 .contact-card h3 {
-    color: white;
+    color: rgb(0, 0, 0);
     margin-bottom: 0.5rem;
 }
 
 .contact-card p {
-    color: #d1c6c6;
+    color: #000000;
 }
 
 /* Modern Form Styles */
