@@ -7,28 +7,19 @@
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-teenage-doing-discussion-3d-cartoon-character-illustration-png-image_9240194.png" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
-<body>
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="logo">Yash Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
     <style>
         /* Modern Navbar Styles */
         .navbar {
-            background-color: #333; /* Dark background */
-            padding: 10px 20px; /* Padding for the navbar */
+            background-color: #444; /* Slightly lighter background */
+            padding: 15px 30px; /* Increased padding for a more spacious look */
             position: sticky; /* Sticky navbar */
             top: 0; /* Stick to the top */
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
             z-index: 1000; /* Ensure it stays above other content */
-            transition: background-color 0.3s; /* Smooth background transition */
+            transition: background-color 0.5s; /* Smooth transition for background color */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .navbar.scrolled {
             background-color: #222; /* Darker background when scrolled */
@@ -37,6 +28,17 @@
             list-style: none; /* Remove bullet points */
             display: flex; /* Flexbox for horizontal layout */
             gap: 20px; /* Space between links */
+            display: flex; /* Default to flex for larger screens */
+        }
+        .nav-links.active {
+            display: flex; /* Show links when active */
+            flex-direction: column; /* Stack links vertically */
+            position: absolute; /* Positioning for dropdown */
+            background-color: #444; /* Match navbar background */
+            top: 60px; /* Position below navbar */
+            right: 0; /* Align to the right */
+            width: 100%; /* Full width */
+            z-index: 1000; /* Ensure it stays above other content */
         }
         .nav-links li a {
             color: white; /* White text color */
@@ -44,13 +46,123 @@
             padding: 10px 15px; /* Padding for links */
             border-radius: 5px; /* Rounded corners */
             transition: background-color 0.3s, transform 0.2s, color 0.3s; /* Smooth transition */
+            font-weight: 500; /* Slightly bolder text for better readability */
         }
         .nav-links li a:hover {
-            background-color: #555; /* Change background on hover */
+            background-color: #666; /* Darker background on hover */
             transform: scale(1.1); /* Slightly enlarge on hover */
-            color: #FFD700; /* Change text color on hover */
+            color: #FFD700; /* Gold color for hover effect */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column; /* Stack navbar items vertically */
+                padding: 10px; /* Adjust padding */
+            }
+            .nav-links {
+                display: none; /* Hide links by default on mobile */
+                width: 100%; /* Full width for mobile */
+            }
+            .hamburger {
+                display: flex; /* Show hamburger on mobile */
+            }
+            .hero-content {
+                text-align: center; /* Center text in hero section */
+            }
+            .about-content {
+                flex-direction: column; /* Stack about section content */
+                align-items: center; /* Center align */
+            }
+            .skills-grid {
+                flex-direction: column; /* Stack skills vertically */
+            }
+            .project-grid {
+                grid-template-columns: 1fr; /* Single column for projects */
+            }
+            .contact-wrapper {
+                flex-direction: column; /* Stack contact info and form */
+            }
+        }
+
+        /* Hero Section Styles */
+        .hero-content {
+            padding: 50px 20px; /* Increased padding for a more spacious layout */
+            color: #fff; /* White text for better contrast */
+        }
+        .hero-title {
+            font-size: 2.5em; /* Larger font size for the title */
+            font-weight: bold; /* Bold title for emphasis */
+        }
+        .hero-description {
+            font-size: 1.2em; /* Slightly larger description text */
+            margin-top: 10px; /* Space above the description */
+        }
+
+        /* About Section Styles */
+        .about-content {
+            padding: 40px 20px; /* Increased padding for better spacing */
+        }
+        .bio h3 {
+            font-weight: bold; /* Bold subheading for emphasis */
+        }
+        .skills-grid {
+            gap: 30px; /* Increased gap between skill cards */
+        }
+
+        /* Project Card Styles */
+        .project-card {
+            border: 1px solid #ddd; /* Subtle border for project cards */
+            border-radius: 8px; /* Rounded corners for a modern look */
+            overflow: hidden; /* Prevent overflow of content */
+            transition: transform 0.3s; /* Smooth scaling effect */
+        }
+        .project-card:hover {
+            transform: scale(1.05); /* Slightly enlarge on hover */
+        }
+
+        /* Contact Section Styles */
+        .contact-wrapper {
+            padding: 40px 20px; /* Increased padding for better spacing */
+        }
+        .contact-card {
+            background-color: #f9f9f9; /* Light background for contact cards */
+            border-radius: 8px; /* Rounded corners */
+            padding: 20px; /* Padding for content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+        }
+
+        /* Hamburger Menu Styles */
+        .hamburger {
+            display: none; /* Hidden by default */
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px;
+            transition: 0.3s;
         }
     </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Yash Portfolio</div>
+        <div class="hamburger" id="hamburger">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
     <!-- Hero Section -->
     <section id="home" class="hero">
@@ -316,21 +428,17 @@
             anchor.addEventListener('click', function(e) {
                 e.preventDefault();
                 const targetId = this.getAttribute('href');
-                document.querySelector(targetId).scrollIntoView({
+                const targetElement = document.querySelector(targetId);
+                const headerOffset = document.querySelector('.navbar').offsetHeight; // Get navbar height
+                const elementPosition = targetElement.getBoundingClientRect().top; // Get target position
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset; // Calculate offset position
+
+                window.scrollTo({
+                    top: offsetPosition,
                     behavior: 'smooth'
                 });
             });
         });
-
-        // Smooth scroll effect for mouse wheel
-        window.addEventListener('wheel', (event) => {
-            event.preventDefault();
-            const delta = event.deltaY * 1.5;
-            window.scrollBy({
-                top: delta,
-                behavior: 'smooth'
-            });
-        }, { passive: false });
 
         // Change navbar background on scroll
         window.addEventListener('scroll', () => {
@@ -340,6 +448,14 @@
             } else {
                 navbar.classList.remove('scrolled');
             }
+        });
+
+        // Toggle hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navLinks = document.querySelector('.nav-links');
+
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
         });
     </script>
 </body>
