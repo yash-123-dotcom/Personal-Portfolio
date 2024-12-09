@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yash Portfolio | Python Developer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-teenage-doing-discussion-3d-cartoon-character-illustration-png-image_9240194.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">Yash Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <style>
+        /* Modern Navbar Styles */
+        .navbar {
+            background-color: #333; /* Dark background */
+            padding: 10px 20px; /* Padding for the navbar */
+            position: sticky; /* Sticky navbar */
+            top: 0; /* Stick to the top */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Shadow for depth */
+            z-index: 1000; /* Ensure it stays above other content */
+            transition: background-color 0.3s; /* Smooth background transition */
+        }
+        .navbar.scrolled {
+            background-color: #222; /* Darker background when scrolled */
+        }
+        .nav-links {
+            list-style: none; /* Remove bullet points */
+            display: flex; /* Flexbox for horizontal layout */
+            gap: 20px; /* Space between links */
+        }
+        .nav-links li a {
+            color: white; /* White text color */
+            text-decoration: none; /* Remove underline */
+            padding: 10px 15px; /* Padding for links */
+            border-radius: 5px; /* Rounded corners */
+            transition: background-color 0.3s, transform 0.2s, color 0.3s; /* Smooth transition */
+        }
+        .nav-links li a:hover {
+            background-color: #555; /* Change background on hover */
+            transform: scale(1.1); /* Slightly enlarge on hover */
+            color: #FFD700; /* Change text color on hover */
+        }
+    </style>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+            <div class="cube"></div>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-greeting">👋 Hello World, I am</div>
+                <h1>Your <span class="highlight">Yash Sharma</span></h1>
+                <div class="hero-title">
+                    I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span>
+                </div>
+                <p class="hero-description">Transforming ideas into elegant solutions through code</p>
+                
+                <div class="hero-buttons">
+                    <a href="#contact" class="cta-button primary">
+                        <span>Get in Touch</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#projects" class="cta-button secondary">
+                        <span>View Work</span>
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1+</span>
+                        <span class="stat-label">Years Experience</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Projects Done</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Happy Clients</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <div class="arrow"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Me</h2>
+        <div class="about-content">
+            <div class="about-image">
+                <div class="image-container">
+                    <!-- अपनी प्रोफाइल फोटो का लिंक यहाँ डालें -->
+                    <img src="https://png.pngtree.com/png-vector/20230902/ourmid/pngtree-teenage-doing-discussion-3d-cartoon-character-illustration-png-image_9240194.png" alt="Profile Photo">
+                </div>
+            </div>
+            <div class="about-text">
+                <div class="bio">
+                    <h3>Who am I?</h3>
+                    <p>I'm a passionate Python developer with expertise in web development and automation. I love creating efficient solutions to complex problems.</p>
+                    <p>With 1 years of experience in software development, I specialize in building scalable applications and automated solutions.</p>
+                </div>
+                
+                <div class="skills-container">
+                    <h3>Technical Skills</h3>
+                    <div class="skills-grid">
+                        <div class="skill-card">
+                            <i class="fab fa-python"></i>
+                            <span>Python</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fab fa-django"></i>
+                            <span>Django</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-database"></i>
+                            <span>SQL</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <i class="fas fa-server"></i>
+                            <span>REST APIs</span>
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="achievements">
+                    <h3>Achievements</h3>
+                    <div class="achievement-cards">
+                        <div class="achievement-card">
+                            <i class="fas fa-award"></i>
+                            <h4>50+</h4>
+                            <p>Projects Completed</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-users"></i>
+                            <h4>30+</h4>
+                            <p>Happy Clients</p>
+                        </div>
+                        <div class="achievement-card">
+                            <i class="fas fa-code"></i>
+                            <h4>100K+</h4>
+                            <p>Lines of Code</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>My Projects</h2>
+        <div class="projects-filter">
+        </div>
+        <div class="project-grid">
+            <div class="project-card" data-category="python ai">
+                <div class="project-img">
+                    <img src="assets/chat app.png" alt="Chat Application">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="#" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/yash-123-dotcom/Public-Chat-Web-application" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Public Chat Application</h3>
+                    <p>A modern public chat application</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Flask</span>
+                        <span>HTML/CSS</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" data-category="python automation">
+                <div class="project-img">
+                    <img src="assets/insta reel downloader.png" alt="Instagram Reel Downloader">
+                    <div class="project-overlay">
+                        <div class="project-links">
+                            <a href="https://instareel.streamlit.app/" target="_blank" class="project-link"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="https://github.com/yash-123-dotcom/instagram-reel-downloader" target="_blank" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-info">
+                    <h3>Instagram Reel Downloader</h3>
+                    <p>An automated tool that allows users to easily download Instagram reels by simply providing the video URL.</p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Streamlit</span>
+                        <span>os</span>
+                        <span>instaloader</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <div class="contact-wrapper">
+            <div class="contact-info">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Location</h3>
+                    <p>Moradabad, UP, India</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-envelope"></i>
+                    <h3>Email</h3>
+                    <p>sgolu625981@gmail.com</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Phone</h3>
+                    <p>+91 81938690XX</p>
+                </div>
+            </div>
+            
+            <div class="contact-content">
+                <form id="contact-form" class="modern-form">
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Your Name</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="email" required>
+                        <label>Your Email</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <input type="text" required>
+                        <label>Subject</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <div class="input-group">
+                        <textarea required></textarea>
+                        <label>Your Message</label>
+                        <span class="input-highlight"></span>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+        
+        <div class="social-links">
+            <a href="https://github.com/yash-123-dotcom" class="social-btn">
+                <i class="fab fa-github"></i>
+                <span>GitHub</span>
+            </a>
+            <a href="https://www.linkedin.com/in/yash-sharma-73302123b/" class="social-btn">
+                <i class="fab fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/yash_sharma.76/" class="social-btn">
+                <i class="fab fa-instagram"></i>
+                <span>Instagram</span>
+            </a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 yash sharma. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Smooth scroll effect for anchor links
+        document.querySelectorAll('.nav-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                document.querySelector(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Smooth scroll effect for mouse wheel
+        window.addEventListener('wheel', (event) => {
+            event.preventDefault();
+            const delta = event.deltaY * 1.5;
+            window.scrollBy({
+                top: delta,
+                behavior: 'smooth'
+            });
+        }, { passive: false });
+
+        // Change navbar background on scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    </script>
+</body>
+</html> 
