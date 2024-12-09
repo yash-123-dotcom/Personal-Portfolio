@@ -557,12 +557,12 @@ h2 {
 }
 
 .contact-card h3 {
-    color: var(--text-color);
+    color: white;
     margin-bottom: 0.5rem;
 }
 
 .contact-card p {
-    color: #ccc;
+    color: #d1c6c6;
 }
 
 /* Modern Form Styles */
@@ -586,7 +586,7 @@ h2 {
     color: var(--text-color);
     background: transparent;
     border: none;
-    border-bottom: 2px solid #666;
+    border-bottom: 2px solid #000000;
     outline: none;
     transition: border-color 0.3s ease;
 }
@@ -597,7 +597,7 @@ h2 {
     left: 0;
     padding: 1rem 0;
     font-size: 1rem;
-    color: #666;
+    color: #000000;
     pointer-events: none;
     transition: 0.3s ease;
 }
