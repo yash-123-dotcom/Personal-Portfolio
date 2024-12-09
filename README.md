@@ -26,9 +26,6 @@ Fully Responsive: Optimized for all screen sizes (desktop, tablet, and mobile).
 Interactive Animations: Smooth animations and transitions using CSS and JavaScript.
 Project Showcase: Dedicated section to highlight your best work.
 Contact Form: Easy way for visitors to reach out to you.
-🖼️ Screenshots
-
-<img align="center" src="assests/Portfolio image" alt="Portfolio" height="30" width="40" /></a> 
 
 🔧 Tech Stack
 HTML5: For the structure of the website.
