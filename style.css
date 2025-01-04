@@ -893,4 +893,21 @@ footer {
     .achievement-cards {
         grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     }
+}
+
+/* Add these new styles for video support */
+.project-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-video {
+    transform: scale(1.1);
+}
+
+/* Optional: Add play/pause functionality on hover */
+.project-video:hover {
+    cursor: pointer;
 } 
