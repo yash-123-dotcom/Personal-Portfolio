@@ -910,4 +910,40 @@ footer {
 /* Optional: Add play/pause functionality on hover */
 .project-video:hover {
     cursor: pointer;
+}
+
+/* Responsive Design for Projects */
+@media (max-width: 768px) {
+    .project-img {
+        height: 180px; /* Slightly smaller on mobile */
+    }
+    
+    .project-info h3 {
+        font-size: 1.1rem;
+    }
+    
+    .project-info p {
+        font-size: 0.85rem;
+    }
+    
+    .project-tech span {
+        font-size: 0.75rem;
+        padding: 0.3rem 0.6rem;
+    }
+}
+
+/* Optional: Add some animation when projects come into view */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-card {
+    animation: fadeInUp 0.6s ease-out;
 } 
